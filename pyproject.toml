@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "rag-meter"
-version = "0.1.0"
+version = "0.1.1"
 description = "A unified evaluation framework for RAG models."
 authors = ["marwan-elghitany-cntxt <marwan.elghitany@cntxt.tech>"]
 license = "MIT"
