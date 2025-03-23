@@ -6,9 +6,13 @@ authors = ["marwan-elghitany-cntxt <marwan.elghitany@cntxt.tech>"]
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/marwan-elghitany-cntxt/rag-meter"
+packages = [{ include = "rag_meter" }]
+include = ["README.md", "LICENSE"]
+
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.9.7 || >3.9.7,<3.14"
+asyncio = { version = "*", optional = true }
 langchain-openai = "^0.3.9"
 langchain = "^0.3.21"
 openai = "^1.67.0"
@@ -17,10 +21,14 @@ pandas = "^2.2.3"
 ragas = "^0.2.14"
 deepeval = "^2.6.2"
 trulens = "^1.4.6"
+trulens-providers-openai = "^1.4.7"
 datasets = "^3.4.1"
 arize-phoenix = "^8.15.0"
 streamlit = "^1.43.2"
+loguru = "^0.7.2"
 
+[tool.poetry.scripts]
+rag-meter = "rag_meter.cli.main:main"
 
 
 [build-system]
